@@ -27,6 +27,26 @@ algo-ex
 - https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 - https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/
 ``` js
+两面墙，前行，中间有个记录最大结果的
+
 // 时间复杂度：O(N)O(N)，其中 NN 是字符串的长度。左指针和右指针分别会遍历整个字符串一次。
 // 空间复杂度：O(|\Sigma|)O(∣Σ∣)，其中 \SigmaΣ 表示字符集（即字符串中可以出现的字符），|\Sigma|∣Σ∣ 表示字符集的大小。在本题中没有明确说明字符集，因此可以默认为所有 ASCII 码在 [0, 128)[0,128) 内的字符，即 |\Sigma| = 128∣Σ∣=128。我们需要用到哈希集合来存储出现过的字符，而字符最多有 |\Sigma|∣Σ∣ 个，因此空间复杂度为 O(|\Sigma|)O(∣Σ∣)。
+```
+
+
+
+# leetcode | 5 longest-palindromic-substring | 最长回文子串 | mid
+- https://leetcode-cn.com/problems/longest-palindromic-substring/
+- https://github.com/azl397985856/leetcode/blob/master/problems/5.longest-palindromic-substring.md
+``` js
+// 时间复杂度：O(n^2)，其中 nn 是字符串的长度。动态规划的状态总数为 O(n^2)，对于每个状态，我们需要转移的时间为 O(1)。
+// 空间复杂度：O(n^2)，即存储动态规划状态需要的空间。
+
+```
+
+
+
+# leetcode | 5 xxxxx | xxxx | mid
+- 
+``` js
 ```
