@@ -31,7 +31,6 @@ var longestPalindrome = function (s) {
   return res;
 };
 
-
-console.log(longestPalindrome('bacbbcad'))
+console.log(longestPalindrome("bacbbcad"));
 
 // 了解遍历轨迹
