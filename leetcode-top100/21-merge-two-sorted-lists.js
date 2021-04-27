@@ -21,7 +21,7 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
- const mergeTwoLists = function (l1, l2) {
+const mergeTwoLists = function (l1, l2) {
   if (l1 === null) {
     return l2;
   }
@@ -36,4 +36,3 @@
     return l2;
   }
 };
-
