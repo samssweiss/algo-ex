@@ -8,6 +8,11 @@
  * 
  */
 
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -16,10 +21,6 @@
  * }
  */
 
-function ListNode(val, next) {
-  this.val = val === undefined ? 0 : val;
-  this.next = next === undefined ? null : next;
-}
 /**
  * @param {ListNode} head
  * @param {number} n
@@ -35,7 +36,10 @@ var removeNthFromEnd = function (head, n) {
   let currentP1 = dummyHead;
   let currentP2 = dummyHead;
   while (currentP1) {
+    console.log(i, currentP1.val, currentP2.val);
     if (i === n) {
+      // console.log(n, currentP1.val, currentP2.val)
+      // console.log(1111)
       currentP2 = currentP2.next;
     }
     if (i !== n) {
@@ -47,29 +51,49 @@ var removeNthFromEnd = function (head, n) {
   return dummyHead.next;
 };
 
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+var removeNthFromEnd2 = function (head, n) {
+  let i = 0;
+  const noop = {
+    next: null,
+  };
+  const dummyHead = new ListNode();
+  dummyHead.next = head;
+  let currentP1 = dummyHead;
+  let currentP2 = dummyHead;
+  while (currentP1) {
+    console.log(i, currentP1.val);
+    if (i < n + 1) {
+      //
+    } else {
+      currentP2 = currentP2.next;
+    }
+    i++;
+    currentP1 = currentP1.next;
+  }
+  currentP2.next = ((currentP2 || noop).next || noop).next;
+  return dummyHead.next;
+};
 
 function createNodeList(arr) {
-  // function ListNode(val, next) {
-  //   this.val = val === undefined ? 0 : val;
-  //   this.next = next === undefined ? null : next;
-  // }
-
-  let head = null
-  let tail = null
-  
-  const n = arr.length
+  let head = null;
+  let tail = null;
+  const n = arr.length;
   for (let index = 0; index < n; index++) {
     if (index === 0) {
-      head = new ListNode(arr[index])
-      tail = head
+      head = new ListNode(arr[index]);
+      tail = head;
     } else {
-      const temp = new ListNode(arr[index])
-      tail.next = temp
-      tail = temp
+      const temp = new ListNode(arr[index]);
+      tail.next = temp;
+      tail = temp;
     }
   }
-  
-  return head
+  return head;
 }
 
-console.log(removeNthFromEnd(createNodeList([1, 2, 3, 4, 5]), 2));
+console.log(JSON.stringify(removeNthFromEnd2(createNodeList([1,2,3,4]), 2), null, 2));
