@@ -85,6 +85,12 @@ algo-ex
 ``` js
 ```
 
+# leetcode | 22 generate-parentheses | 括号生成 | mid
+- https://leetcode-cn.com/problems/generate-parentheses/
+- https://github.com/azl397985856/leetcode/blob/master/problems/22.generate-parentheses.md
+``` js
+```
+
 
 
 # leetcode | 5 xxxxx | xxxx | mid
